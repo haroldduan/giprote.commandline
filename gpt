@@ -39,7 +39,7 @@ Note:
 upgrade() {
   cd $giprote_dir
   echo "Upgrading..."
-  remotes=$(git branch -r | grep -E "[0-9].[0-9].[0-9]")
+  remotes=$(git branch -r | grep -v "\->" | grep -E "[0-9].[0-9].[0-9]")
   # echo $remotes
   for remote in $remotes
   do
