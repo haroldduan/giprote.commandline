@@ -42,7 +42,7 @@ git clone https://github.com/haroldduan/giprote.commandline.git
 echo "Installing..."
 cd $giprote_dir
 # git branch -r | grep -E "[0-9].[0-9].[0-9]" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
-remotes=$(git branch -r | grep -E "[0-9].[0-9].[0-9]")
+remotes=$(git branch -r | grep -v "\->" | grep -E "[0-9].[0-9].[0-9]")
 # echo $remotes
 for remote in $remotes
 do
