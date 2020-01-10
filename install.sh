@@ -56,9 +56,9 @@ do
     # echo "$max"
   fi
 done
+git checkout $max
 git fetch --all
 git pull --all
-git checkout $max
 #sudo chown ${USER} $giprote_dir/giprote.sh
 #sudo chmod -R 755 $giprote_dir/giprote.sh
 #sudo chown ${USER} $giprote_dir/gpt
