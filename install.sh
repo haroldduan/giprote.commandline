@@ -40,8 +40,8 @@ git clone https://github.com/haroldduan/giprote.commandline.git
 # sudo -c wget http://rds.avatech.com.cn:7070/harold.duan/giprote.commandline/releases/download/v1.0.1/gpt_v1.2.2.zip
 # sudo unzip -o gpt_v1.2.2.zip
 echo "Installing..."
+cd $giprote_dir
 # git branch -r | grep -E "[0-9].[0-9].[0-9]" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
-echo "Upgrading..."
 remotes=$(git branch -r | grep -E "[0-9].[0-9].[0-9]")
 # echo $remotes
 for remote in $remotes

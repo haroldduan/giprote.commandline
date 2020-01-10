@@ -37,6 +37,7 @@ Note:
 }
 
 upgrade() {
+  cd $giprote_dir
   echo "Upgrading..."
   remotes=$(git branch -r | grep -E "[0-9].[0-9].[0-9]")
   # echo $remotes
@@ -61,7 +62,7 @@ upgrade() {
 # echo $1
 # echo $2
 # echo "$@"
-
+cur_path=$PWD
 if [[ -z "$@}" ]]
 then
   # echo `giprote -h`
@@ -98,3 +99,4 @@ else
       help_info
   esac
 fi
+cd $cur_path
