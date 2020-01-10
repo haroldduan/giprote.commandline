@@ -56,6 +56,7 @@ upgrade() {
   git fetch --all
   git pull --all
   git checkout $max
+  git branch | grep -E "[0-9].[0-9].[0-9]"
 }
 
 # echo $0
