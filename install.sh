@@ -33,7 +33,7 @@ export giprote_dir=$HOME/.giprote/giprote.commandline
 EOF
 # source $HOME/.bashrc
 # . $HOME/.bashrc
-cd $giprote_dir
+cd $HOME/.giprote
 sudo rm -rf giprote.commandline
 git clone https://github.com/haroldduan/giprote.commandline.git
 # sudo cp -r $(cd $(dirname $0); pwd -P)/giprote.sh $HOME/.giprote
