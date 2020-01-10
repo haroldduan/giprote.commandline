@@ -33,7 +33,7 @@ export giprote_dir=$HOME/.giprote/giprote.commandline
 EOF
 # source $HOME/.bashrc
 # . $HOME/.bashrc
-cd $HOME/.giprote
+cd $giprote_dir
 sudo rm -rf giprote.commandline
 git clone https://github.com/haroldduan/giprote.commandline.git
 # sudo cp -r $(cd $(dirname $0); pwd -P)/giprote.sh $HOME/.giprote
@@ -68,5 +68,6 @@ echo "Done!"
 sh $giprote_dir/scripts/copyright.sh "copyright"
 while read line; do echo $line; done < $giprote_dir/scripts/version
 sh $giprote_dir/scripts/copyright.sh "giprote"
+cd $cur_path
 
 } # this ensures the entire script is downloaded #
