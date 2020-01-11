@@ -24,15 +24,15 @@ function WriteContents([String]$file,[String]$cur_path,[Int]$depth,[String]$last
     {
         Get-ChildItem $cur_path -Exclude *.sh,*.ps1,*.md,.git*,addon,service,web,gpt* | ForEach-Object -Process{
             $cur_dir = $_.Name
-            echo $cur_dir
+            Write-Output $cur_dir
             # echo $_.Directory
             # echo $_.FullName
             $tab = "    "*($depth - 1)
             if($last_dir -ne ""){
-                echo "$tab+ [$cur_dir](./$last_dir/$cur_dir)  " >> $file
+                Write-Output "$tab+ [$cur_dir](./$last_dir/$cur_dir)  " >> $file
             }
             else{
-                echo "$tab+ [$cur_dir](./$cur_dir)  " >> $file
+                Write-Output "$tab+ [$cur_dir](./$cur_dir)  " >> $file
             }
             if($_ -isnot [System.IO.FileInfo])
             {
@@ -48,24 +48,34 @@ function WriteContents([String]$file,[String]$cur_path,[Int]$depth,[String]$last
     }
 }
 
-echo "Generating README..."
-# Get current file
-$cur_file = $MyInvocation.MyCommand.Definition
-# Get current root path
-$root_path = Split-Path -Parent $cur_file
+.$env:giprote_dir\scripts\copyright.ps1 "copyright"
+Write-Output '
+###################################################################
+# Generademe                                                      #
+# Auto generate\update README.md file.                            #
+# AVATech-RDC support                                             #
+# Copyright AVATech-RDC@2020                                      #
+###################################################################
+'
+Write-Output "Generating README..."
+# $cur_file = $MyInvocation.MyCommand.Definition
+# $root_path = Split-Path -Parent $cur_file
+# $root_name =  Split-Path $root_path -Leaf
+$root_path = $PWD
+# Write-Output $root_path
 $root_name =  Split-Path $root_path -Leaf
-cd $root_path
-echo "Removing old file..."
+# Set-Location $root_path
+Write-Output "Removing old file..."
 # Remove old README.md
-if (Test-Path $root_path\README.md)
+if (Test-Path README.md)
 {
-    del $root_path\README.md
+    Remove-Item -Recurse -Force README.md
 }
 # echo "Creating README..."
 # New README.md
 # New-Item README.md
 # Write README top contents
-echo "# $root_name
+Write-Output "# $root_name
 
 ## Overview
 
@@ -76,11 +86,11 @@ echo "# $root_name
 
 
 ## Structures
-" >> $root_path/README.md
-echo "Scanning folders and files..."
+" >> README.md
+Write-Output "Scanning folders and files..."
 WriteContents "$root_path/README.md" $root_path 0 ""
 # Write README bottom contents
-echo "
+Write-Output "
 ## ***Contributors***
 
 <p align=`"left`">
@@ -106,5 +116,5 @@ echo "
 </h3>
 
 ***Auto generating by Generademe.***
-" >> $root_path/README.md
-echo "Done!"
+" >> README.md
+Write-Output "Done!"

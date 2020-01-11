@@ -5,7 +5,7 @@
 **** Reason:[Initicomit] Auto create [dev] and [debug] branches.
 #>
 
-.\scripts\copyright.sh "copyright"
+.$env:giprote_dir\scripts\copyright.ps1 "copyright"
 Write-Output '
 ###################################################################
 # Initicomit                                                      #
@@ -16,7 +16,7 @@ Write-Output '
 '
 Write-Output "Init repo..."
 Write-Output "Generate repo's .gitignore..."
-.\scripts\genignore.sh
+.$env:giprote_dir\scripts\genignore.ps1
 Write-Output "Checking the branch [master]..."
 $branch_master=$(git branch | Where-Object {$_ -match "master"})
 # echo "$branch_master"

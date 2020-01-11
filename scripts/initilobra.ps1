@@ -4,7 +4,7 @@
 # Date:20200103
 # Reason:[Initilobra] Auto create local [dev] and [debug] branches.
 
-.\scripts\copyright.sh "copyright"
+.$env:giprote_dir\scripts\copyright.ps1 "copyright"
 Write-Output '
 ###################################################################
 # Initilobra                                                      #
