@@ -19,21 +19,12 @@ $giprote_dir="$env:USERPROFILE\.giprote\giprote.commandline"
 [environment]::SetEnvironmentvariable("giprote_dir", "$giprote_dir", "User")
 # Write-Output $giprote_dir
 # [environment]::GetEnvironmentvariable("giprote_dir", "User")
-Copy-Item -Recurse -Force gpt.ps1 $giprote_dir
-if (-not (Test-Path "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"))
-{
-    New-Item -Type file -Force -Name $profil
-}
-Copy-Item -Recurse -Force .\scripts\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\Documents\WindowsPowerShell
-& $env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-
 # Copy-Item -Recurse -Force .\scripts $env:giprote_dir
 # Copy-Item -Recurse -Force .\templates $env:giprote_dir
 Set-Location $env:USERPROFILE\.giprote
 Remove-Item -Force -Recurse giprote.commandline
 git clone https://github.com/haroldduan/giprote.commandline.git
 Write-Output "Installing..."
-Set-Location $env:giprote_dir
 # git branch -r | grep -E "[0-9].[0-9].[0-9]" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
 $remotes=$(git branch -r | Where-Object { $_ -match "^.*^(?!.*HEAD).*[0-9].*" })
 foreach($remote in $remotes) {
@@ -50,6 +41,14 @@ foreach($remote in $remotes) {
 git fetch --all
 git pull --all
 git checkout $max
+Set-Location $env:giprote_dir
+Copy-Item -Recurse -Force gpt.ps1 $giprote_dir
+if (-not (Test-Path "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"))
+{
+    New-Item -Type file -Force -Name $profil
+}
+Copy-Item -Recurse -Force .\scripts\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\Documents\WindowsPowerShell
+& $env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Write-Output "Done!"
 sh $giprote_dir\scripts\copyright.ps1 "copyright"
 Get-Content -Encoding utf8 $giprote_dir\scripts\version
