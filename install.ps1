@@ -22,7 +22,10 @@ $giprote_dir="$env:USERPROFILE\.giprote\giprote.commandline"
 # Copy-Item -Recurse -Force .\scripts $env:giprote_dir
 # Copy-Item -Recurse -Force .\templates $env:giprote_dir
 Set-Location $env:USERPROFILE\.giprote
-Remove-Item -Force -Recurse giprote.commandline
+# if (Test-Path giprote.commandline)
+# {
+    # Remove-Item -Force -Recurse giprote.commandline
+# }
 git clone https://github.com/haroldduan/giprote.commandline.git
 Write-Output "Installing..."
 # git branch -r | grep -E "[0-9].[0-9].[0-9]" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
