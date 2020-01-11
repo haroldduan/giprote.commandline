@@ -53,7 +53,7 @@ if (-not (Test-Path "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.Powe
 Copy-Item -Recurse -Force .\scripts\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\Documents\WindowsPowerShell
 & $env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Write-Output "Done!"
-sh $giprote_dir\scripts\copyright.ps1 "copyright"
+.$giprote_dir\scripts\copyright.ps1 "copyright"
 Get-Content -Encoding utf8 $giprote_dir\scripts\version
-sh $giprote_dir\scripts\copyright.ps1 "giprote"
+.$giprote_dir\scripts\copyright.ps1 "giprote"
 Set-Location $cur_path
