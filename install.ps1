@@ -36,7 +36,7 @@ foreach($remote in $remotes) {
     $max = "0.0.0"
     $temp = $remote.Trim().Substring(7,$remote.Trim().Length - 7)
     # Write-Output $temp
-    git branch --track $temp $remote
+    git branch --track $temp $remote.Trim()
     # Write-Output "$temp"
     if ($temp -gt $max) {
         $max = $temp
