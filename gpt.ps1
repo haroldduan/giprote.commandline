@@ -48,15 +48,17 @@ function upgrade() {
     # Write-Output $remotes
     foreach($remote in $remotes) {
         # Write-Output "$remote"
-        git branch --track "${remote#origin/}" "$remote"
-        $max="0.0.0"
-        $temp="${remote#origin/}"
+        $max = "0.0.0"
+        $temp = $remote.Trim().Substring(7,$remote.Trim().Length - 7)
+        # Write-Output $temp
+        git branch --track $temp $remote
         # Write-Output "$temp"
-        if ($temp -gt $max ) {
-        $max = $temp
-        # Write-Output "$max"
+        if ($temp -gt $max) {
+            $max = $temp
+            # Write-Output "$max"
         }
     }
+    # Write-Output $max
     git fetch --all
     git pull --all
     git checkout $max

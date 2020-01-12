@@ -33,13 +33,14 @@ Set-Location $env:giprote_dir
 $remotes=$(git branch -r | Where-Object { $_ -match "^.*^(?!.*HEAD).*[0-9].*" })
 foreach($remote in $remotes) {
     # Write-Output "$remote"
-    git branch --track "${remote#origin/}" "$remote"
-    $max="0.0.0"
-    $temp="${remote#origin/}"
+    $max = "0.0.0"
+    $temp = $remote.Trim().Substring(7,$remote.Trim().Length - 7)
+    # Write-Output $temp
+    git branch --track $temp $remote
     # Write-Output "$temp"
-    if ($temp -gt $max ) {
-    $max = $temp
-    # Write-Output "$max"
+    if ($temp -gt $max) {
+        $max = $temp
+        # Write-Output "$max"
     }
 }
 git fetch --all
