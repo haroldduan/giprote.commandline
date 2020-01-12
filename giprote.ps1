@@ -9,7 +9,7 @@
 # Write-Output $args
 
 function version_info() {
-    .$env:giprote_dir\scripts\copyright.ps1 "copyright"
+    # .$env:giprote_dir\scripts\copyright.ps1 "copyright"
     .$env:giprote_dir\scripts\copyright.ps1 "giprote"
     Set-Location $env:giprote_dir
     # Get-Location

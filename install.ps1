@@ -45,7 +45,7 @@ foreach($remote in $remotes) {
 git fetch --all
 git pull --all
 git checkout $max
-Copy-Item -Recurse -Force gpt.ps1 $giprote_dir
+# Copy-Item -Recurse -Force gpt.ps1 $giprote_dir
 if (-not (Test-Path "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"))
 {
     New-Item -Type file -Force -Name $profil
