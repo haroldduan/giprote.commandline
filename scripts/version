@@ -7,19 +7,17 @@
 
 Versions
 
-v1.1.7
+v0.1.1
 增加了仓库remote分支 [master] [dev] [debug] 的初始化
 增加了仓库local分支 [master] [dev] [debug] 的初始化
 增加了项目文件夹 {p} 基于模板 <.templates> 直接创建
 增加了仓库README.md文件自动创建及更新
 增加了自动压缩打包功能<.scripts>/[building.sh]
 
-v1.1.8
+v1.0.0
 增加了自动生成的.gitignore里忽略dotNET相关文件夹的功能
-
-v1.2.0
 修改了脚本文件，增加Copyright信息
 增加了版本描述文件
 
-v1.2.2
+v1.1.0
 增加了命令行功能
