@@ -79,8 +79,8 @@ function get_repo_path(){
   repo_url=$(git config --get remote.origin.url)
   # echo $repo_url
   # echo $(echo $repo_url | grep "^(:7070/)$/.git")
-  url="https://github.com/"
-  # url=$srv_url
+  # url="https://github.com/"
+  url=$srv_url
   suffix=".git"
   if [[ $repo_url =~ $url ]];
   then
