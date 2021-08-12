@@ -36,7 +36,7 @@ else
     git push --set-upstream origin debug
 fi
 
-sh $(cd $(dirname $0); pwd -P)/branches.sh
+sh $giprote_dir/scripts/branches.sh
 
 echo "Checkout the local branch [dev]..."
 git checkout dev
