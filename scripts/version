@@ -38,3 +38,6 @@ v1.3.1
 
 v1.3.2
 + 解决无sudo模块的bug(有些内unix环境可能没自动安装sudo模块,诸如archlinux,alpha,git-bash...)
+
+v1.3.3
+解决安装时展示Version List的bug
