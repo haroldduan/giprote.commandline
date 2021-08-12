@@ -32,7 +32,7 @@ Example:
   gpt gen --readme               Generate source README.md
 Note:
   If you have some problems,you can pull iusses to this repo:
-    https://github.com/EDITeam/giprote.commandline
+    https://github.com/EDITeam/giprote.commandline.git
   "
 }
 
@@ -79,9 +79,9 @@ else
     ;;
     "init --commit")
       #echo $PWD
-      sh $giprote_dir/scripts/inticomit.sh
+      sh $giprote_dir/scripts/initicomit.sh
     ;;
-    "--local-branch")
+    "init --local-branch")
       sh $giprote_dir/scripts/initlobra.sh
     ;;
     "gen --prof")

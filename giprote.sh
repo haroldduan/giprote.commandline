@@ -79,9 +79,9 @@ else
     ;;
     "init --commit")
       #echo $PWD
-      sh $giprote_dir/scripts/inticomit.sh
+      sh $giprote_dir/scripts/initicomit.sh
     ;;
-    "--local-branch")
+    "init --local-branch")
       sh $giprote_dir/scripts/initlobra.sh
     ;;
     "gen --prof")
