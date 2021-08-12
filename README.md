@@ -1,4 +1,4 @@
-# giprote.commandline ![version](https://img.shields.io/badge/version-1.3.1-red.svg?cacheSeconds=2592000) ![license](https://img.shields.io/badge/license-Apache2.0-blue.svg) ![date](https://img.shields.io/date/1578499200.svg)
+# giprote.commandline ![version](https://img.shields.io/badge/version-1.3.2-red.svg?cacheSeconds=2592000) ![license](https://img.shields.io/badge/license-Apache2.0-blue.svg) ![date](https://img.shields.io/date/1578499200.svg)
 
 - [Overview](#Overview)
 - [Dependency](#Dependency)
@@ -137,6 +137,30 @@ _or_
 
 ```
 $ gpt --upgrade
+```
+
+## ErrorProcess
+
+- Error Description
+
+```
+bash: gpt: command not found
+```
+
+```
+$ grep -q "$HOME/.giprote/giprote.commandline" $HOME/.bashrc || cat>>$HOME/.bashrc<<EOF
+export PATH=$PATH:$HOME/.giprote/giprote.commandline
+export giprote_dir=$HOME/.giprote/giprote.commandline
+EOF
+```
+
+**_or_**
+
+> Go **_$HOME_** directory,open **_.bashrc_** file add these codes:
+
+```
+export PATH=$PATH:$HOME/.giprote/giprote.commandline
+export giprote_dir=$HOME/.giprote/giprote.commandline
 ```
 
 ## **_Contributors_**
