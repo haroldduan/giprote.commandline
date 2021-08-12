@@ -32,3 +32,6 @@ v1.3.0
 增加初始化的保护分支
 * push disable
 * merge enable
+
+v1.3.1
+修改引用仓库地址
