@@ -31,10 +31,11 @@ grep -q "$HOME/.giprote/giprote.commandline" $HOME/.bashrc || cat>>$HOME/.bashrc
 export PATH=$PATH:$HOME/.giprote/giprote.commandline
 export giprote_dir=$HOME/.giprote/giprote.commandline
 EOF
-# source $HOME/.bashrc
+source $HOME/.bashrc
 # . $HOME/.bashrc
 cd $HOME/.giprote
-sudo rm -rf giprote.commandline
+# sudo rm -rf giprote.commandline
+rm -rf giprote.commandline
 # git clone https://github.com/EDITeam/giprote.commandline.git
 git clone https://gitee.com/haroldduan/giprote.commandline.git
 # sudo cp -r $(cd $(dirname $0); pwd -P)/giprote.sh $HOME/.giprote
