@@ -27,7 +27,7 @@ mkdir $HOME/.giprote
 # grep -q "$HOME/.giprote/" $HOME/.bashrc || echo "export giprote_dir=$HOME/.giprote" >> $HOME/.bashrc
 export PATH=$PATH:$HOME/.giprote/giprote.commandline
 export giprote_dir=$HOME/.giprote/giprote.commandline
-sudo grep -q "$HOME/.giprote/giprote.commandline" $HOME/.bashrc || sudo cat>>$HOME/.bashrc<<EOF
+grep -q "$HOME/.giprote/giprote.commandline" $HOME/.bashrc || cat>>$HOME/.bashrc<<EOF
 export PATH=$PATH:$HOME/.giprote/giprote.commandline
 export giprote_dir=$HOME/.giprote/giprote.commandline
 EOF
