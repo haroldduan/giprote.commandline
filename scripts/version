@@ -27,3 +27,8 @@ v1.2.0
 
 v1.2.1
 修改引用仓库地址
+
+v1.3.0
+增加初始化的保护分支
+* push disable
+* merge enable
