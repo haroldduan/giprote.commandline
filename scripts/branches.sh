@@ -3,7 +3,8 @@
 # Date:20210911
 # Reason:API operator module.
 cur_path=$(cd $(dirname $0); pwd -P)
-source $cur_path/config/.conf
+CONF=$cur_path/config/.conf
+source $CONF
 # echo "srv_url = $srv_url"
 # echo "user_token = $user_token"
 # echo "header_text = $header_text"
@@ -66,6 +67,41 @@ cnt_master="{
         \"enable_status_check\": true
     }"
 
+set_key_value() {
+  local key=${1}
+  local value=${2}
+  echo $value
+  if [ -n $value ]; then
+    sed -i "" -e "s/$key=/$key=$value/g" $CONF
+  fi
+}
+
+function get_repo_path(){
+  repo_url=$(git config --get remote.origin.url)
+  # echo $repo_url
+  # echo $(echo $repo_url | grep "^(:7070/)$/.git")
+  url="https://github.com/"
+  # url=$srv_url
+  suffix=".git"
+  if [[ $repo_url =~ $url ]];
+  then
+    repo_git=${repo_url#$url}
+    # echo $repo_git
+    echo ${repo_git%*$suffix}
+    return $?
+  fi
+}
+
+function get_user_token(){
+  if [ -z "$user_token" ];
+  then
+    read -p "Enter the [User Access Tokens] generate by AVATech Gitea system...> " temp_token
+    # echo $temp_token
+    set_key_value "user_token" "$temp_token"
+    source $CONF
+  fi
+}
+
 function branch_protections(){
 #   echo "curl -X GET $srv_url$api_root$path_repo$1 -H "$header_text" -H "$header_token" -H "$header_cntnt""
 #   echo $(curl -X GET $srv_url$api_root$path_repo$1 -H "$header_text" -H "$header_token" -H "$header_cntnt")
@@ -79,4 +115,18 @@ function branch_protections(){
   curl -s POST $srv_url$api_root$path_repo$1/branch_protections -H "$header_text" -H "$header_token" -H "$header_cntnt" -d "$cnt_master"
 }
 
-branch_protections $1
+repo_path=$(get_repo_path)
+# echo $repo_path
+if [ -z "$repo_path" ];
+then
+  echo "This repo is not exists in AVATech's Gitea system!"
+else
+  get_user_token
+  # echo $user_token
+  if [ -z "$user_token" ];
+  then
+    echo "[User Access Tokens] is invalid!"
+  else
+    branch_protections $repo_path
+  fi
+fi
