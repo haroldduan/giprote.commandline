@@ -30,11 +30,11 @@ v1.2.1
 
 v1.3.0
 增加初始化的保护分支
-* push disable
-* merge enable
++ push disable
++ merge enable
 
 v1.3.1
 修改引用仓库地址
 
 v1.3.2
-* 解决无sudo模块的bug(有些内unix环境可能没自动安装sudo模块,诸如archlinux,alpha,git-bash...)
++ 解决无sudo模块的bug(有些内unix环境可能没自动安装sudo模块,诸如archlinux,alpha,git-bash...)
