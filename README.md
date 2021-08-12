@@ -1,16 +1,16 @@
-# giprote.commandline ![version](https://img.shields.io/badge/version-1.2.1-red.svg?cacheSeconds=2592000) ![license](https://img.shields.io/badge/license-Apache2.0-blue.svg) ![date](https://img.shields.io/date/1578499200.svg)
+# giprote.commandline ![version](https://img.shields.io/badge/version-1.3.0-red.svg?cacheSeconds=2592000) ![license](https://img.shields.io/badge/license-Apache2.0-blue.svg) ![date](https://img.shields.io/date/1578499200.svg)
 
-+ [Overview](#Overview)  
-+ [Dependency](#Dependency)  
-+ [Install](#Install)  
-  - [Linux|MacOS](#Linux|MacOS)  
-  - [Windows](#Windows)  
-+ [Usage](#Usage)  
-+ [Upgrade](#Upgrade)
-+ [Contributors](#Contributors)  
-+ [Thanks](#Thanks)  
+- [Overview](#Overview)
+- [Dependency](#Dependency)
+- [Install](#Install)
+  - [Linux|MacOS](#Linux|MacOS)
+  - [Windows](#Windows)
+- [Usage](#Usage)
+- [Upgrade](#Upgrade)
+- [Contributors](#Contributors)
+- [Thanks](#Thanks)
 
-## Overview  
+## Overview
 
 giprote,it is AVATech gitea project template kits.
 
@@ -27,7 +27,7 @@ haroldduan@Think-Harold:~$ gpt -v
 * 1.0.0
 haroldduan@Think-Harold:~$ gpt -h
 
-Usage: 
+Usage:
   gpt -h|--help                  Show help message
   gpt -v|--version               Print out the installed version of gpt
   gpt init                       Init repo
@@ -51,13 +51,13 @@ Note:
 
 ## Dependency
 
-+ **[git](https://git-scm.com/)**
+- **[git](https://git-scm.com/)**
 
 ## Install
 
 ### Linux|MacOS
 
-***Install by bash***
+**_Install by bash_**
 
 ```
 $ wget -qO- https://raw.githubusercontent.com/haroldduan/giprote.commandline/1.2.1/install.sh | bash
@@ -67,7 +67,7 @@ $ wget -qO- https://raw.githubusercontent.com/haroldduan/giprote.commandline/1.2
 $ wget -qO- http://rds.avatech.com.cn:8080/scripts/gpt/install.sh | bash
 ```
 
-*or*
+_or_
 
 ```
 $ curl -o- https://raw.githubusercontent.com/haroldduan/giprote.commandline/1.2.1/install.sh | bash
@@ -79,7 +79,7 @@ $ curl -o- http://rds.avatech.com.cn:8080/scripts/gpt/install.sh | bash
 
 ### Windows
 
-***Install by PowerShell***
+**_Install by PowerShell_**
 
 ```
 PS C:\Users\Administrator> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/haroldduan/giprote.commandline/1.2.1/install.ps1'))
@@ -91,49 +91,49 @@ PS C:\Users\Administrator> Set-ExecutionPolicy Bypass -Scope Process -Force; iex
 
 ## Usage
 
-+ **help**
+- **help**
 
 ```
 $ gpt -h
 ```
 
-*or*
+_or_
 
 ```
 $ gpt --help
 ```
 
-+ **version**
+- **version**
 
 ```
 $ gpt -v
 ```
 
-*or*
+_or_
 
 ```
 $ gpt --version
 ```
 
-+ **init commit**
+- **init commit**
 
 ```
 $ gpt init --commit
 ```
 
-+ **init local branches**
+- **init local branches**
 
 ```
 $ gpt init --local-branch
 ```
 
-+ **generate project folders**
+- **generate project folders**
 
 ```
 $ gpt gen --prof
 ```
 
-+ **generate repo readme**
+- **generate repo readme**
 
 ```
 $ gpt gen --readme
@@ -145,13 +145,13 @@ $ gpt gen --readme
 $ gpt -u
 ```
 
-*or*
+_or_
 
 ```
 $ gpt --upgrade
 ```
 
-## ***Contributors***
+## **_Contributors_**
 
 <a href="http://rds.avatech.com.cn:7070/org/Product/members">
   <a href="http://rds.avatech.com.cn:7070/harold.duan"><img src="http://rds.avatech.com.cn:7070/user/avatar/harold.duan/290" width="70" alt="Harold.Duan" /></a>
@@ -160,7 +160,7 @@ $ gpt --upgrade
   <a href="http://rds.avatech.com.cn:7070/shuo.liu"><img src="http://rds.avatech.com.cn:7070/user/avatar/shuo.liu/290" width="70" alt="Shuo.Liu" /></a>
 </a>
 
-## ***Thanks***
+## **_Thanks_**
 
 <h3 align="left">
   <a href="http://rds.avatech.com.cn:7070/Project"><img src="http://rds.avatech.com.cn:7070/user/avatar/Project/140" width="70" alt="Team RDC-Project" /></a>
