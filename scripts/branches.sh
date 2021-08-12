@@ -2,8 +2,7 @@
 # Programmer:Harold.Duan
 # Date:20210911
 # Reason:API operator module.
-cur_path=$(cd $(dirname $0); pwd -P)
-CONF=$cur_path/config/.conf
+CONF=$giprote_dir/scripts/config/.conf
 source $CONF
 # echo "srv_url = $srv_url"
 # echo "user_token = $user_token"
