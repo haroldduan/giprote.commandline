@@ -82,7 +82,7 @@ else
       sh $giprote_dir/scripts/initicomit.sh
     ;;
     "init --local-branch")
-      sh $giprote_dir/scripts/initlobra.sh
+      sh $giprote_dir/scripts/initilobra.sh
     ;;
     "gen --prof")
       sh $giprote_dir/scripts/genprof.sh
