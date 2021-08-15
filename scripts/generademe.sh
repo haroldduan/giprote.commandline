@@ -52,7 +52,8 @@ echo "Removing old file..."
 rm -rf README.md
 cur_file="README.md"
 cur_date="`date +%Y-%m-%d`"
-root_path=$(cd $(dirname $0); pwd)
+# root_path=$(cd $(dirname $0); pwd)
+root_path=$(pwd)
 root_name=${root_path##*/}
 echo "Writing head contents..."
 cat>"${cur_file}"<<EOF
