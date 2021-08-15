@@ -1,4 +1,4 @@
-# giprote.commandline ![version](https://img.shields.io/badge/version-1.3.3-red.svg?cacheSeconds=2592000) ![license](https://img.shields.io/badge/license-Apache2.0-blue.svg) ![date](https://img.shields.io/date/1578499200.svg)
+# giprote.commandline ![version](https://img.shields.io/badge/version-1.3.4-red.svg?cacheSeconds=2592000) ![license](https://img.shields.io/badge/license-Apache2.0-blue.svg) ![date](https://img.shields.io/date/1578499200.svg)
 
 - [Overview](#Overview)
 - [Dependency](#Dependency)
@@ -60,13 +60,13 @@ Note:
 **_Install by bash_**
 
 ```
-$ wget -qO- https://gitee.com/haroldduan/giprote.commandline/raw/1.3.3/install.sh | bash
+$ wget -qO- https://gitee.com/haroldduan/giprote.commandline/raw/1.3.4/install.sh | bash
 ```
 
 _or_
 
 ```
-$ curl -o- https://gitee.com/haroldduan/giprote.commandline/raw/1.3.3/install.sh | bash
+$ curl -o- https://gitee.com/haroldduan/giprote.commandline/raw/1.3.4/install.sh | bash
 ```
 
 ### Windows
@@ -74,7 +74,7 @@ $ curl -o- https://gitee.com/haroldduan/giprote.commandline/raw/1.3.3/install.sh
 **_Install by PowerShell_**
 
 ```
-PS C:\Users\Administrator> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://gitee.com/haroldduan/giprote.commandline/raw/1.3.3/install.ps1'))
+PS C:\Users\Administrator> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://gitee.com/haroldduan/giprote.commandline/raw/1.3.4/install.ps1'))
 ```
 
 ## Usage
