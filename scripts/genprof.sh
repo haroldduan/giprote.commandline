@@ -25,6 +25,7 @@ echo $root_path
 # sudo ls -la $root_path/templates
 cd $period
 touch .gitkeep
-sudo cp -r $root_path/templates/* .
+# sudo cp -r $root_path/templates/* .
+cp -r $root_path/templates/* .
 echo "Generating source_codes sub folders..."
 echo "Done!"

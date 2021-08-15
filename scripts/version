@@ -8,25 +8,25 @@
 Versions
 
 v0.1.1
-增加了仓库remote分支 [master] [dev] [debug] 的初始化
-增加了仓库local分支 [master] [dev] [debug] 的初始化
-增加了项目文件夹 {p} 基于模板 <.templates> 直接创建
-增加了仓库README.md文件自动创建及更新
-增加了自动压缩打包功能<.scripts>/[building.sh]
++ 增加了仓库remote分支 [master] [dev] [debug] 的初始化
++ 增加了仓库local分支 [master] [dev] [debug] 的初始化
++ 增加了项目文件夹 {p} 基于模板 <.templates> 直接创建
++ 增加了仓库README.md文件自动创建及更新
++ 增加了自动压缩打包功能<.scripts>/[building.sh]
 
 v1.0.0
-增加了自动生成的.gitignore里忽略dotNET相关文件夹的功能
-修改了脚本文件，增加Copyright信息
-增加了版本描述文件
++ 增加了自动生成的.gitignore里忽略dotNET相关文件夹的功能
+~ 修改了脚本文件，增加Copyright信息
++ 增加了版本描述文件
 
 v1.1.0
-增加了命令行功能
++ 增加了命令行功能
 
 v1.2.0
-增加了说明文档
++ 增加了说明文档
 
 v1.2.1
-修改引用仓库地址
+~ 修改引用仓库地址
 
 v1.3.0
 增加初始化的保护分支
@@ -34,10 +34,13 @@ v1.3.0
 + merge enable
 
 v1.3.1
-修改引用仓库地址
+~ 修改引用仓库地址
 
 v1.3.2
-+ 解决无sudo模块的bug(有些内unix环境可能没自动安装sudo模块,诸如archlinux,alpha,git-bash...)
+~ 解决无sudo模块的bug(有些内unix环境可能没自动安装sudo模块,诸如archlinux,alpha,git-bash...)
 
 v1.3.3
-解决安装时展示Version List的bug
+~ 解决安装时展示Version List的bug
+
+v1.3.4
+~ 解决生成项目结构时无sudo模块的bug
