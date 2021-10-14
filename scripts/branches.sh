@@ -35,7 +35,7 @@ cnt_debug="{
             \"harold.duan\",
             \"pancy.fan\",
             \"shuo.liu\",
-            \"zero.zhang\"
+            \"allen.zhang\"
         ],
         \"enable_status_check\": true
     }"
@@ -48,7 +48,7 @@ cnt_dev="{
             \"harold.duan\",
             \"pancy.fan\",
             \"shuo.liu\",
-            \"zero.zhang\"
+            \"allen.zhang\"
         ],
         \"enable_status_check\": true
     }"
@@ -61,7 +61,7 @@ cnt_master="{
             \"harold.duan\",
             \"pancy.fan\",
             \"shuo.liu\",
-            \"zero.zhang\"
+            \"allen.zhang\"
         ],
         \"enable_status_check\": true
     }"
